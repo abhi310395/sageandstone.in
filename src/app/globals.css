@@ -1,26 +1,27 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* --- The Sage & Stone Color Palette --- */
+  
+  /* STONE (Reliability - Greys) */
+  --color-stone-50: #F8FAFC;
+  --color-stone-100: #F1F5F9;
+  --color-stone-800: #1E293B;
+  --color-stone-900: #0F172A;
+
+  /* SAGE (Wisdom - Greens) */
+  --color-sage-400: #34D399;
+  --color-sage-500: #10B981; /* Primary Brand Color */
+  --color-sage-600: #059669;
+
+  /* --- Fonts --- */
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-outfit);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base Styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-stone-50);
+  color: var(--color-stone-800);
+  font-family: var(--font-sans);
 }
